@@ -212,3 +212,6 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'django_su.backends.SuBackend',
 )
+
+# This will ensure that emails will be printed to the console instead of real send
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
