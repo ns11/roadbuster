@@ -35,7 +35,7 @@ djangocms-googlemap==1.1.1
 djangocms-helper==1.1.0
 djangocms-installer==1.0.1
 djangocms-link==2.1.2
--e git+git@github.com:FidelityInternational/djangocms-moderation.git@ec1f222e6cb13f7de0ed60957fbf8bec7d10bee2#egg=djangocms_moderation
+-e git+git@github.com:FidelityInternational/djangocms-moderation.git@9307979bfbf8e9ce4b94718412506bbb2b4b2a1a#egg=djangocms_moderation
 djangocms-picture==2.0.6
 djangocms-snippet==2.0.0
 djangocms-style==2.0.2
