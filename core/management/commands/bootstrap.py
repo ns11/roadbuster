@@ -9,7 +9,7 @@ from django.conf import settings
 from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _
 
-from djangocms_moderation.models import Workflow, Role, PageModerationRequest
+from djangocms_moderation.models import Workflow, Role, ModerationCollection
 from djangocms_moderation import constants
 
 
@@ -68,34 +68,20 @@ class Command(BaseCommand):
         wf3st1 = wf3.steps.create(role=role1, is_required=True, order=1,)
         wf3st2 = wf3.steps.create(role=role3, is_required=False, order=2,)
 
-        # create page moderation requests and actions
-        moderation_request1 = PageModerationRequest.objects.create(
-            page=pg1, language='en', workflow=wf1, is_active=True,)
-        moderation_request1.actions.create(by_user=user, action=constants.ACTION_STARTED,)
-
-        PageModerationRequest.objects.create(
-            page=pg1, language='en', workflow=wf1, is_active=False,)
-        PageModerationRequest.objects.create(
-            page=pg2, language='en', workflow=wf2, is_active=False,)
-
-        moderation_request2 = PageModerationRequest.objects.create(
-            page=pg3, language='en', workflow=wf2, is_active=True,)
-        moderation_request2.actions.create(
-            by_user=user, action=constants.ACTION_STARTED,)
-        moderation_request2.actions.create(
-            by_user=user, action=constants.ACTION_APPROVED, step_approved=wf2st1,)
-        moderation_request2.actions.create(
-            by_user=user, action=constants.ACTION_APPROVED, step_approved=wf2st2,)
-
-        moderation_request3 = PageModerationRequest.objects.create(
-            page=pg4, language='en', workflow=wf3, is_active=True,)
-        moderation_request3.actions.create(by_user=user, action=constants.ACTION_STARTED,)
-        moderation_request3.actions.create(
-            by_user=user,
-            to_user=user2,
-            action=constants.ACTION_APPROVED,
-            step_approved=wf3st1,
+        collection1 = ModerationCollection.objects.create(
+            author=user, name='Collection 1', workflow=wf1
         )
+        collection2 = ModerationCollection.objects.create(
+            author=user2, name='Collection 2', workflow=wf2
+        )
+
+        collection1.add_object(pg1)
+        collection1.add_object(pg2)
+
+        collection2.add_object(pg3)
+        collection2.add_object(pg4)
+
+
 
 
     def create_pages(self):
