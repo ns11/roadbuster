@@ -1,5 +1,6 @@
 aldryn-boilerplates==0.7.7
 -e git://github.com/aldryn/aldryn-forms.git@2932c85ffc87717ed1b9a3cdf1ada0e3ea2cdbb0#egg=aldryn_forms
+appnope==0.1.0
 backcall==0.1.0
 certifi==2018.4.16
 chardet==3.0.4
@@ -13,7 +14,7 @@ django-absolute==0.3
 django-admin-sortable2==0.6.19
 django-appconf==1.0.2
 django-classy-tags==0.8.0
--e git+git@github.com:damilare/django-cms.git@cd74dc85db4ed3e757bfe95d0b34b2091aee5c46#egg=django_cms
+-e git://github.com/divio/django-cms.git@2894ae8bcf92092d947a097499c01ab2bbb0e6df#egg=django_cms
 django-emailit==0.2.3
 django-filer==1.3.2
 django-formtools==2.1
@@ -35,7 +36,7 @@ djangocms-googlemap==1.1.1
 djangocms-helper==1.1.0
 djangocms-installer==1.0.1
 djangocms-link==2.1.2
--e git+git@github.com:FidelityInternational/djangocms-moderation.git@13eaf68e5cb89a1dfe7696af7df448fffdaa1c08#egg=djangocms_moderation
+-e git+https://github.com/FidelityInternational/djangocms-moderation.git@14083e16d12937042d9ded2010b1360715bd5f9d#egg=djangocms_moderation
 djangocms-picture==2.0.6
 djangocms-snippet==2.0.0
 djangocms-style==2.0.2

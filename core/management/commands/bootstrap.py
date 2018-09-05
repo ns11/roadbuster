@@ -107,11 +107,11 @@ class Command(BaseCommand):
         lang = settings.LANGUAGES[0][0]
         page = create_page(_('Home'), template, lang, published=True)
         page.set_as_homepage()
-        placeholder['main'] = page.placeholders.get(slot='content')
+        placeholder['main'] = page.get_placeholders('en').get(slot='content')
 
         try:
             # try to get a feature placeholder
-            placeholder_feature = page.placeholders.get(slot='feature')
+            placeholder_feature = page.get_placeholders('en').get(slot='feature')
             add_plugin(placeholder_feature, 'TextPlugin', lang,
                     body=content['feature'])
         except Placeholder.DoesNotExist:
