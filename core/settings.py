@@ -139,6 +139,7 @@ INSTALLED_APPS = (
     'djangocms_snippet',
     'djangocms_googlemap',
     'djangocms_video',
+    'djangocms_versioning',
     'djangocms_moderation',
     'adminsortable2',
     'absolute',
