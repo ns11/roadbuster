@@ -23,30 +23,34 @@ django-mptt==0.8.7
 django-polymorphic==2.0.2
 django-ranged-response==0.2.0
 django-sekizai==0.10.0
-django-simple-captcha==0.5.8
+django-simple-captcha==0.5.9
 django-sizefield==0.9.1
 django-su==0.6.0
 django-tablib==3.2
 django-treebeard==4.3
 djangocms-admin-style==1.2.8
 djangocms-attributes-field==0.3.0
-djangocms-column==1.7.0
+djangocms-column==1.8.0
 djangocms-file==2.0.2
 djangocms-googlemap==1.1.1
 djangocms-helper==1.1.0
 djangocms-installer==1.0.1
 djangocms-link==2.1.2
--e git+https://github.com/divio/djangocms-moderation.git@9c180b4c1111bbd6717481b62291420d22fd9ee8#egg=djangocms_moderation
+-e git+https://github.com/divio/djangocms-moderation.git@4e9f0d543c9fd2587e62fe81ceab212e32fd3cb0#egg=djangocms_moderation
 djangocms-picture==2.0.6
 djangocms-snippet==2.0.0
 djangocms-style==2.0.2
 djangocms-text-ckeditor==3.6.0
--e git://github.com/divio/djangocms-versioning.git@6e0b745cadddf12a0b2fb80df0a88f333c42f131#egg=djangocms_versioning
+-e git://github.com/divio/djangocms-versioning.git@f05eed311cf0bca4a3fc1d6005d682ecc847ec80#egg=djangocms_versioning
 djangocms-video==2.0.4
 docopt==0.6.2
 easy-thumbnails==2.5
 et-xmlfile==1.0.1
 flake8==3.5.0
+Faker==0.9.0 
+factory-boy==2.11.1 
+python-dateutil==2.7.3 
+text-unidecode==1.2
 html5lib==0.9999999
 idna==2.7
 ipdb==0.11
@@ -65,7 +69,7 @@ parso==0.2.1
 pbr==4.1.1
 pexpect==4.6.0
 pickleshare==0.7.4
-Pillow==5.1.0
+Pillow==5.2.0
 pluggy==0.6.0
 premailer==3.2.0
 prompt-toolkit==1.0.15
