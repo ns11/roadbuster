@@ -47,9 +47,9 @@ class Command(BaseCommand):
         admin = factories.UserFactory(is_staff=True, is_superuser=True, username="admin", email="admin@admin.com", password="admin")
 
         # create users, groups and roles
-        user = factories.UserFactory(username='test', email='test@test.com', password='test')
-        user2 = factories.UserFactory(username='test2', email='test2@test.com', password='test2')
-        user3 = factories.UserFactory(username='test3', email='test3@test.com', password='test3')
+        user = factories.UserFactory(username='test', email='test@test.com', password='test', is_staff=True, is_superuser=True)
+        user2 = factories.UserFactory(username='test2', email='test2@test.com', password='test2', is_staff=True, is_superuser=True)
+        user3 = factories.UserFactory(username='test3', email='test3@test.com', password='test3', is_staff=True, is_superuser=True)
 
         group = Group.objects.create(name='Group 1',)
         user2.groups.add(group)
