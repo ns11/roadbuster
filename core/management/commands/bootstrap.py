@@ -44,12 +44,20 @@ class Command(BaseCommand):
         """
 
         # create admin user
-        admin = factories.UserFactory(is_staff=True, is_superuser=True, username="admin", email="admin@admin.com", password="admin")
+        admin = factories.UserFactory(is_staff=True, is_superuser=True, 
+            username="admin", email="admin@admin.com", password="admin")
 
         # create users, groups and roles
         user = factories.UserFactory(username='test', email='test@test.com', password='test', is_staff=True, is_superuser=True)
         user2 = factories.UserFactory(username='test2', email='test2@test.com', password='test2', is_staff=True, is_superuser=True)
         user3 = factories.UserFactory(username='test3', email='test3@test.com', password='test3', is_staff=True, is_superuser=True)
+
+        # create pages
+        # self.create_homepage(admin)
+        pg1 = create_page(title='Page 1', template='INHERIT', language='en', created_by=user, )
+        pg2 = create_page(title='Page 2', template='INHERIT', language='en', created_by=user2, )
+        pg3 = create_page(title='Page 3', template='INHERIT', language='en', created_by=user3, )
+        pg4 = create_page(title='Page 4', template='INHERIT', language='en', created_by=user,)
 
         group = Group.objects.create(name='Group 1',)
         user2.groups.add(group)
@@ -64,18 +72,11 @@ class Command(BaseCommand):
         wf2 = Workflow.objects.create(pk=2, name='Workflow 2',)
         wf3 = Workflow.objects.create(pk=3, name='Workflow 3',)
 
-        # create pages
-        self.create_homepage(user)
-        pg1 = create_page(title='Page 1', template='INHERIT', language='en',)
-        pg2 = create_page(title='Page 2', template='INHERIT', language='en',)
-        pg3 = create_page(title='Page 3', template='INHERIT', language='en',)
-        pg4 = create_page(title='Page 4', template='INHERIT', language='en',)
-
         # create versions
-        v1 = create_page_version(pg1, user, DRAFT)
-        v2 = create_page_version(pg2, user2, DRAFT)
-        v3 = create_page_version(pg3, user3, DRAFT)
-        v4 = create_page_version(pg4, user, DRAFT)
+        v1 = Version.objects.filter_by_grouper(pg1).filter(state=DRAFT).first()
+        v2 = Version.objects.filter_by_grouper(pg2).filter(state=DRAFT).first()
+        v3 = Version.objects.filter_by_grouper(pg3).filter(state=DRAFT).first()
+        v4 = Version.objects.filter_by_grouper(pg4).filter(state=DRAFT).first()
 
         # create workflow steps for workflow
         wf1st1 = wf1.steps.create(role=role1, is_required=True, order=1,)
@@ -121,7 +122,9 @@ class Command(BaseCommand):
             template = settings.CMS_TEMPLATES[0][0]
 
         lang = settings.LANGUAGES[0][0]
-        page = create_page(_('Home'), template, lang)
+        page = create_page(title=_('Home'), template=template, language=lang, created_by=user,)
+
+        # page = create_page(_('Home'), template, lang, user)
         page.set_as_homepage()
 
         # create version
