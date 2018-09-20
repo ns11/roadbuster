@@ -53,7 +53,7 @@ class Command(BaseCommand):
         user3 = factories.UserFactory(username='test3', email='test3@test.com', password='test3', is_staff=True, is_superuser=True)
 
         # create pages
-        # self.create_homepage(admin)
+        self.create_homepage(admin)
         pg1 = create_page(title='Page 1', template='INHERIT', language='en', created_by=user, )
         pg2 = create_page(title='Page 2', template='INHERIT', language='en', created_by=user2, )
         pg3 = create_page(title='Page 3', template='INHERIT', language='en', created_by=user3, )
@@ -128,13 +128,14 @@ class Command(BaseCommand):
         page.set_as_homepage()
 
         # create version
-        create_page_version(page, user, PUBLISHED)
+        # create version
+        v5 = Version.objects.filter_by_grouper(page).filter(state=DRAFT).first()
 
-        placeholder['main'] = page.get_placeholders('en').get(slot='content')
+        placeholder['main'] = v5.content.get_placeholders().get(slot='content')
 
         try:
             # try to get a feature placeholder
-            placeholder_feature = page.get_placeholders('en').get(slot='feature')
+            placeholder_feature = v5.content.get_placeholders().get(slot='feature')
             add_plugin(
                 placeholder_feature,
                 'TextPlugin', lang,
