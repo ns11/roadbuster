@@ -28,7 +28,10 @@ SECRET_KEY = '-_p$&ycnz)y%fg@*7y_mj9=ww^a01krmujj_p0^qwff@u3a0(^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'localhost'
+]
 
 
 # Application definition
@@ -142,6 +145,8 @@ INSTALLED_APPS = (
     'djangocms_versioning',
     'djangocms_version_locking',
     'djangocms_moderation',
+    'haystack',
+    'djangocms_internalsearch',
     'adminsortable2',
     'absolute',
     'aldryn_forms',
@@ -217,3 +222,12 @@ AUTHENTICATION_BACKENDS = (
 
 # This will ensure that emails will be printed to the console instead of real send
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+HAYSTACK_CONNECTIONS = {
+   'default': {
+       'ENGINE': 'djangocms_internalsearch.backends.elasticsearch2.InternalSearchESEngine',
+       # 'ENGINE': 'haystack.backends.elasticsearch2_backend.Elasticsearch2SearchEngine',
+       'URL': 'http://127.0.0.1:9200/',
+       'INDEX_NAME': 'haystack',
+   },
+}

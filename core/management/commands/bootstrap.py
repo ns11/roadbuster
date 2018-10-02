@@ -146,7 +146,7 @@ class Command(BaseCommand):
         # create version
         # create version
         v5 = Version.objects.filter_by_grouper(page).filter(state=DRAFT).first()
-
+        v5.publish(user)
         placeholder['main'] = v5.content.get_placeholders().get(slot='content')
 
         try:

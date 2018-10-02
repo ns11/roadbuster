@@ -13,8 +13,9 @@ from django.views.static import serve
 admin.autodiscover()
 
 urlpatterns = [
-    url(r'^sitemap\.xml$', sitemap,
-        {'sitemaps': {'cmspages': CMSSitemap}}),
+   url(r'^sitemap\.xml$', sitemap,
+       {'sitemaps': {'cmspages': CMSSitemap}}),
+   url(r'^search/', include('haystack.urls')),
 ]
 
 urlpatterns += i18n_patterns(
