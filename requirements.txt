@@ -14,7 +14,7 @@ django-absolute==0.3
 django-admin-sortable2==0.6.19
 django-appconf==1.0.2
 django-classy-tags==0.8.0
--e git://github.com/divio/django-cms.git@fb27c34e2a4aebd2e10e1262ef1c43b69c79a132#egg=django_cms
+-e git://github.com/divio/django-cms.git@5005cd933e12332e9296cdda3e0a9eeaea3fc9a2#egg=django_cms
 django-emailit==0.2.3
 django-filer==1.3.2
 django-formtools==2.1
@@ -42,6 +42,7 @@ djangocms-snippet==2.0.0
 djangocms-style==2.0.2
 djangocms-text-ckeditor==3.6.0
 -e git://github.com/divio/djangocms-versioning.git@40ee51f18127f822857c8d4fc0926c09d6bf188d#egg=djangocms_versioning
+-e git://github.com/FidelityInternational/djangocms-versioning.git@61d891967e5eb055fc0b607362eca1a2cc65a31c#egg=djangocms_version-locking
 djangocms-video==2.0.4
 docopt==0.6.2
 easy-thumbnails==2.5

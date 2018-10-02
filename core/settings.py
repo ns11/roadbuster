@@ -140,6 +140,7 @@ INSTALLED_APPS = (
     'djangocms_googlemap',
     'djangocms_video',
     'djangocms_versioning',
+    'djangocms_version_locking',
     'djangocms_moderation',
     'adminsortable2',
     'absolute',
