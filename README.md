@@ -40,8 +40,3 @@ Contribution
 =============
 
 Please add more management commands as you see fit.
-
-
-Todo
-=============
-1. Add Django Toolbar
