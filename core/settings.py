@@ -33,6 +33,8 @@ ALLOWED_HOSTS = [
     'localhost'
 ]
 
+INTERNAL_IPS = ALLOWED_HOSTS
+
 
 # Application definition
 
@@ -113,7 +115,8 @@ MIDDLEWARE = (
     'cms.middleware.user.CurrentUserMiddleware',
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.toolbar.ToolbarMiddleware',
-    'cms.middleware.language.LanguageCookieMiddleware'
+    'cms.middleware.language.LanguageCookieMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
 INSTALLED_APPS = (
@@ -153,7 +156,8 @@ INSTALLED_APPS = (
     'captcha',
     'emailit',
     'djangocms_moderation.contrib.moderation_forms',
-    'core'
+    'core',
+    'debug_toolbar'
 )
 
 LANGUAGES = (
