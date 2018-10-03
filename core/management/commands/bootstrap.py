@@ -106,6 +106,13 @@ class Command(BaseCommand):
         wf3st2 = wf3.steps.create(role=role3, is_required=False, order=2,)
 
         # create collections
+        # collection 1  (v1 by user, v2 by user2)->
+        #   workflow 1 ->
+        #       step_role_1 (user) >>
+        #       step_role_2 (user2) >>
+        #       step_role_3 (user2 and user3) >>
+        #
+
         collection1 = ModerationCollection.objects.create(
             author=user, name='Collection 1', workflow=wf1
         )

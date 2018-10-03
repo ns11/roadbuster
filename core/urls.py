@@ -18,15 +18,19 @@ urlpatterns = [
    url(r'^search/', include('haystack.urls')),
 ]
 
+# This is only needed when using runserver.
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns = [
+        url(r'^__debug__/', include(debug_toolbar.urls)),
+        url(r'^media/(?P<path>.*)$', serve,
+            {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
+        ] + staticfiles_urlpatterns() + urlpatterns
+
 urlpatterns += i18n_patterns(
     url(r'^admin/', include(admin.site.urls)),  # NOQA
     url(r'^su/', include('django_su.urls')),
     url(r'^', include('cms.urls')),
 )
 
-# This is only needed when using runserver.
-if settings.DEBUG:
-    urlpatterns = [
-        url(r'^media/(?P<path>.*)$', serve,
-            {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
-        ] + staticfiles_urlpatterns() + urlpatterns
+
