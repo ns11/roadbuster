@@ -8,6 +8,7 @@ from cms.api import create_page, add_plugin, publish_page
 from django.apps import apps
 from django.conf import settings
 from django.contrib.contenttypes.models import ContentType
+from django.contrib.auth.models import Permission
 from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _
 
@@ -48,9 +49,24 @@ class Command(BaseCommand):
             username="admin", email="admin@admin.com", password="admin")
 
         # create users, groups and roles
-        user = factories.UserFactory(username='test', email='test@test.com', password='test', is_staff=True, is_superuser=True)
-        user2 = factories.UserFactory(username='test2', email='test2@test.com', password='test2', is_staff=True, is_superuser=True)
-        user3 = factories.UserFactory(username='test3', email='test3@test.com', password='test3', is_staff=True, is_superuser=True)
+        user = factories.UserFactory(username='test', email='test@test.com', password='test', is_staff=True,)
+        user2 = factories.UserFactory(username='test2', email='test2@test.com', password='test2', is_staff=True, is_superuser=True,)
+        user3 = factories.UserFactory(username='test3', email='test3@test.com', password='test3', is_staff=True, is_superuser=True,)
+
+        # add permissions
+        content_type = ContentType.objects.get_for_model(ModerationCollection)
+        permission = Permission.objects.get(content_type=content_type, codename='can_change_author')
+        user.user_permissions.add(permission)
+        permission = Permission.objects.get(content_type=content_type, codename='change_moderationcollection')
+        user.user_permissions.add(permission)
+        permission = Permission.objects.get(content_type=content_type, codename='add_moderationcollection')
+        user.user_permissions.add(permission)
+        content_type = ContentType.objects.get_for_model(ModerationRequest)
+        permission = Permission.objects.get(content_type=content_type, codename='change_moderationrequest')
+        user.user_permissions.add(permission)
+        permission = Permission.objects.get(content_type=content_type, codename='add_moderationrequest')
+        user.user_permissions.add(permission)
+
 
         # create pages
         self.create_homepage(admin)
