@@ -45,7 +45,7 @@ djangocms-link==2.1.2
 djangocms-picture==2.0.6
 djangocms-snippet==2.0.0
 djangocms-style==2.0.2
-djangocms-text-ckeditor==3.6.0
+-e git+https://github.com/divio/djangocms-text-ckeditor.git@support/4.0.x#egg=djangocms_text_ckeditor
 -e git://github.com/FidelityInternational/djangocms-version-locking.git@1c8685811dfaaa566ca7c23ba6862082eb674447#egg=djangocms_version_locking
 -e git://github.com/divio/djangocms-versioning.git@ee7f955bbeec11dd494e2001094fe6ff47c357dd#egg=djangocms_versioning
 djangocms-video==2.0.4
