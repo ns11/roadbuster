@@ -209,11 +209,11 @@ class Command(BaseCommand):
 
         # create pages
         self.create_homepage(admin)
-        pg1 = create_page(title='Page 1', template='INHERIT', language='en', created_by=user, )
-        pg2 = create_page(title='Page 2', template='INHERIT', language='en', created_by=user2, )
-        pg3 = create_page(title='Page 3', template='INHERIT', language='en', created_by=user3, )
-        pg4 = create_page(title='Page 4', template='INHERIT', language='en', created_by=user,)
-        pg5 = create_page(title='Page 5', template='INHERIT', language='en', created_by=moderator,)
+        pg1 = create_page(title='Page 1 by test', template='INHERIT', language='en', created_by=user, )
+        pg2 = create_page(title='Page 2 by test2', template='INHERIT', language='en', created_by=user2, )
+        pg3 = create_page(title='Page 3 by test3', template='INHERIT', language='en', created_by=user3, )
+        pg4 = create_page(title='Page 4 by test', template='INHERIT', language='en', created_by=user,)
+        pg5 = create_page(title='Page 5 by moderator', template='INHERIT', language='en', created_by=moderator,)
         assign_user_to_page(pg5, moderator, can_view=True,
                             can_change=True)
         assign_user_to_page(pg5, reviewer, can_view=True,
