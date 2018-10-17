@@ -213,7 +213,7 @@ class Command(BaseCommand):
         pg2 = create_page(title='Page 2', template='INHERIT', language='en', created_by=user2, )
         pg3 = create_page(title='Page 3', template='INHERIT', language='en', created_by=user3, )
         pg4 = create_page(title='Page 4', template='INHERIT', language='en', created_by=user,)
-        pg5 = create_page(title='Page 4', template='INHERIT', language='en', created_by=moderator,)
+        pg5 = create_page(title='Page 5', template='INHERIT', language='en', created_by=moderator,)
         assign_user_to_page(pg5, moderator, can_view=True,
                             can_change=True)
         assign_user_to_page(pg5, reviewer, can_view=True,
