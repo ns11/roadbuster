@@ -39,15 +39,15 @@ djangocms-googlemap==1.1.1
 djangocms-helper==1.1.0
 djangocms-installer==1.0.1
 -e git+git@github.com:FidelityInternational/djangocms-fil_admin_style.git@3ac5218fa57acc9c7143a732759860a5acf67ebf#egg=djangocms_fil_admin_style
--e git+git@github.com:FidelityInternational/djangocms-internalsearch.git@2e1878687d74e1a977a7aa6460315c11a7d2f526#egg=djangocms_internalsearch
+-e git+git@github.com:FidelityInternational/djangocms-internalsearch.git@7513c990ec58b82ab816129fe00d7a3a88beb046#egg=djangocms_internalsearch
 djangocms-link==2.1.2
--e git+git@github.com:FidelityInternational/djangocms-moderation.git@da839b89983a8177e48fa1441a5a8b4adfafcc11#egg=djangocms_moderation
+-e git+git@github.com:FidelityInternational/djangocms-moderation.git@07a2c7dbc5fdba2a1a951ee3fe54a6fe0f742797#egg=djangocms_moderation
 djangocms-picture==2.0.6
 djangocms-snippet==2.0.0
 djangocms-style==2.0.2
 -e git+https://github.com/divio/djangocms-text-ckeditor.git@support/4.0.x#egg=djangocms_text_ckeditor
--e git://github.com/FidelityInternational/djangocms-version-locking.git@1c8685811dfaaa566ca7c23ba6862082eb674447#egg=djangocms_version_locking
--e git://github.com/divio/djangocms-versioning.git@ee7f955bbeec11dd494e2001094fe6ff47c357dd#egg=djangocms_versioning
+-e git://github.com/FidelityInternational/djangocms-version-locking.git@d37d1f4820639f75a3303d69a717a75550b0d95d#egg=djangocms_version_locking
+-e git://github.com/divio/djangocms-versioning.git@f303643ed36d7bbf87363b83dac113891c4a3b7d#egg=djangocms_versioning
 djangocms-video==2.0.4
 docopt==0.6.2
 easy-thumbnails==2.5
