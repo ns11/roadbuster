@@ -251,6 +251,11 @@ class Command(BaseCommand):
         v4 = Version.objects.filter_by_grouper(pg4).filter(state=DRAFT).first()
         v5 = Version.objects.filter_by_grouper(pg5).filter(state=DRAFT).first()
 
+        # create previously published version
+        v5.publish(moderator)
+        v5.unpublish(moderator)
+        v5.copy(moderator)
+
         # create workflow steps for workflow
         wf1st1 = wf1.steps.create(role=role1, is_required=True, order=1,)
         wf1st2 = wf1.steps.create(role=role2, is_required=False, order=2,)
@@ -314,13 +319,20 @@ class Command(BaseCommand):
         page.set_as_homepage()
 
         # create version
-        v5 = Version.objects.filter_by_grouper(page).filter(state=DRAFT).first()
-        v5.publish(user)
-        placeholder['main'] = v5.content.get_placeholders().get(slot='content')
+        v6 = Version.objects.filter_by_grouper(page).filter(state=DRAFT).first()
+        # publish version
+        v6.publish(user)
+        # unpublish version (so that we have a version history)
+        v6.unpublish(user)
+        # create a new draft
+        v7 = v6.copy(user)
+        # publish the new draft
+        v7.publish(user)
+        placeholder['main'] = v7.content.get_placeholders().get(slot='content')
 
         try:
             # try to get a feature placeholder
-            placeholder_feature = v5.content.get_placeholders().get(slot='feature')
+            placeholder_feature = v7.content.get_placeholders().get(slot='feature')
             add_plugin(
                 placeholder_feature,
                 'TextPlugin', lang,
