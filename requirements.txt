@@ -41,7 +41,7 @@ djangocms-installer==1.0.1
 -e git+git@github.com:FidelityInternational/djangocms-fil_admin_style.git@3ac5218fa57acc9c7143a732759860a5acf67ebf#egg=djangocms_fil_admin_style
 -e git+git@github.com:FidelityInternational/djangocms-internalsearch.git@7513c990ec58b82ab816129fe00d7a3a88beb046#egg=djangocms_internalsearch
 djangocms-link==2.1.2
--e git+git@github.com:FidelityInternational/djangocms-moderation.git@07a2c7dbc5fdba2a1a951ee3fe54a6fe0f742797#egg=djangocms_moderation
+-e git+git@github.com:divio/djangocms-moderation.git@07a2c7dbc5fdba2a1a951ee3fe54a6fe0f742797#egg=djangocms_moderation
 djangocms-picture==2.0.6
 djangocms-snippet==2.0.0
 djangocms-style==2.0.2
