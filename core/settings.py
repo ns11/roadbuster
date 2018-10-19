@@ -158,7 +158,8 @@ INSTALLED_APPS = (
     'emailit',
     'djangocms_moderation.contrib.moderation_forms',
     'core',
-    'debug_toolbar'
+    'debug_toolbar',
+    'djangocms_fil_bootstrap',
 )
 
 LANGUAGES = (
