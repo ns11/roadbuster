@@ -1,0 +1,8 @@
+-e git://github.com/divio/django-cms.git@release/4.0.x#egg=django_cms
+-e git+git@github.com:FidelityInternational/djangocms-fil_admin_style.git@master#egg=djangocms_fil_admin_style
+-e git+git@github.com:FidelityInternational/djangocms-fil-bootstrap.git@master#egg=djangocms_fil_bootstrap
+-e git+git@github.com:FidelityInternational/djangocms-internalsearch.git@master#egg=djangocms_internalsearch
+-e git://github.com/divio/djangocms-versioning.git@master#egg=djangocms_versioning
+-e git://github.com/FidelityInternational/djangocms-version-locking.git@master#egg=djangocms_version_locking
+-e git+git@github.com:divio/djangocms-moderation.git@release/1.0.x#egg=djangocms_moderation
+-r requirements.txt
