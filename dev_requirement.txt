@@ -1,8 +1,11 @@
+Django==1.11.15
 -e git://github.com/divio/django-cms.git@release/4.0.x#egg=django_cms
--e git+git@github.com:FidelityInternational/djangocms-fil_admin_style.git@master#egg=djangocms_fil_admin_style
+-e git+git@github.com:FidelityInternational/djangocms-fil-admin-style.git@master#egg=djangocms_fil_admin_style
 -e git+git@github.com:FidelityInternational/djangocms-fil-bootstrap.git@master#egg=djangocms_fil_bootstrap
 -e git+git@github.com:FidelityInternational/djangocms-internalsearch.git@master#egg=djangocms_internalsearch
 -e git://github.com/divio/djangocms-versioning.git@master#egg=djangocms_versioning
 -e git://github.com/FidelityInternational/djangocms-version-locking.git@master#egg=djangocms_version_locking
 -e git+git@github.com:divio/djangocms-moderation.git@release/1.0.x#egg=djangocms_moderation
--r requirements.txt
+-e git+https://github.com/divio/djangocms-text-ckeditor.git@support/4.0.x#egg=djangocms_text_ckeditor
+-e git://github.com/aldryn/aldryn-forms.git@2932c85ffc87717ed1b9a3cdf1ada0e3ea2cdbb0#egg=aldryn_forms
+-r ./requirements.txt

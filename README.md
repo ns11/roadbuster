@@ -13,6 +13,11 @@ Extras
 2) django-su is installed, allowing us to switch easily between admin users
 
 
+Prerequisites
+============
+Elastic search needs to be installed. Visit http://127.0.0.1:9200/ to confirm it is installed and configured correctly.
+
+
 Installation & Setup
 ============
 
