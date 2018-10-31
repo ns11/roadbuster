@@ -13,6 +13,11 @@ Extras
 2) django-su is installed, allowing us to switch easily between admin users
 
 
+Prerequisites
+============
+Elastic search needs to be installed. Visit http://127.0.0.1:9200/ to confirm it is installed and configured correctly.
+
+
 Installation & Setup
 ============
 
@@ -20,7 +25,7 @@ This assumes you have a python virtual environment setup with djangocms installe
 
 ```
     mkvirtualenv roadbuster
-    pip install -r requirements.txt
+    pip install -r dev_requirements.txt
 ```
 
 Then, pip install the plugin/application under test/development (e.g django_moderation) using ```pip -e <path_to_plugin>```
@@ -29,10 +34,10 @@ Then, pip install the plugin/application under test/development (e.g django_mode
 Usage
 ==========
 
-1) To reset you database and re-populate it with CMS Pages and Moderation Workflows run:
+1) To reset you database and re-populate it with CMS Pages and Moderation Workflows run the management command:
 
 ``` 
-    ./reload_db.sh
+    python manage.py reload_database
 ```
 
 
