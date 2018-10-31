@@ -16,6 +16,5 @@ class Command(runserver.Command):
             call_command('clear_index', '--noinput')
             call_command('migrate')
             call_command('bootstrap')
-            call_command('runserver')
 
         super().handle(*args, **options)
