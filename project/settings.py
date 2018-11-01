@@ -127,6 +127,7 @@ INSTALLED_APPS = (
     'treebeard',
     'djangocms_text_ckeditor',
     'filer',
+    'djangocms_versioning_filer',
     'easy_thumbnails',
     'djangocms_column',
     'djangocms_file',
