@@ -8,4 +8,7 @@ Django==1.11.15
 -e git+git@github.com:divio/djangocms-moderation.git@release/1.0.x#egg=djangocms_moderation
 -e git+git@github.com:divio/djangocms-text-ckeditor.git@support/4.0.x#egg=djangocms_text_ckeditor
 -e git+git@github.com:aldryn/aldryn-forms.git@2932c85ffc87717ed1b9a3cdf1ada0e3ea2cdbb0#egg=aldryn_forms
+-e git+git@github.com:divio/djangocms-versioning-filer.git@master#egg=djangocms_versioning_filer
+-e git+git@github.com:FidelityInternational/aldryn-redirects.git#egg=aldryn_redirects
+#-e git+git@github.com:divio/djangocms-history.git#egg=djangocms_history
 -r ./requirements.txt

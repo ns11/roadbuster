@@ -95,6 +95,7 @@ TEMPLATES = [
 
 MIDDLEWARE = (
     'cms.middleware.utils.ApphookReloadMiddleware',
+    'aldryn_redirects.middleware.RedirectFallbackMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -127,6 +128,7 @@ INSTALLED_APPS = (
     'treebeard',
     'djangocms_text_ckeditor',
     'filer',
+    'djangocms_versioning_filer',
     'easy_thumbnails',
     'djangocms_column',
     'djangocms_file',
@@ -150,6 +152,8 @@ INSTALLED_APPS = (
     'roadbuster',
     'debug_toolbar',
     'djangocms_fil_bootstrap',
+    'parler',
+    'aldryn_redirects',
 )
 
 LANGUAGES = (
