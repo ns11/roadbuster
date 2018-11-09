@@ -37,7 +37,12 @@ Usage
 1) To reset you database and re-populate it with CMS Pages and Moderation Workflows run the management command:
 
 ``` 
-    python manage.py reload_database
+    python manage.py reload_db
+```
+
+2) To drop the DB and refresh it to a brand new blank database. The reload_db command will also need to be ran manually.
+``` 
+    python manage.py drop_db
 ```
 
 
