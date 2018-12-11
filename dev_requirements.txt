@@ -4,6 +4,7 @@ Django==1.11.15
 -e git+git@github.com:FidelityInternational/djangocms-fil-bootstrap.git@master#egg=djangocms_fil_bootstrap
 -e git+git@github.com:FidelityInternational/djangocms-internalsearch.git@master#egg=djangocms_internalsearch
 -e git+git@github.com:FidelityInternational/djangocms-versioning.git@master#egg=djangocms_versioning
+-e git+git@github.com:FidelityInternational/djangocms-contentexpiry.git@master#egg=djangocms_contentexpiry
 -e git+git@github.com:FidelityInternational/djangocms-version-locking.git@master#egg=djangocms_version_locking
 -e git+git@github.com:divio/djangocms-moderation.git@release/1.0.x#egg=djangocms_moderation
 -e git+git@github.com:divio/djangocms-text-ckeditor.git@support/4.0.x#egg=djangocms_text_ckeditor

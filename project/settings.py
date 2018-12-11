@@ -141,6 +141,7 @@ INSTALLED_APPS = (
     'djangocms_versioning',
     'djangocms_version_locking',
     'djangocms_moderation',
+    'djangocms_contentexpiry',
     'haystack',
     'djangocms_internalsearch',
     'adminsortable2',

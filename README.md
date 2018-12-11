@@ -45,6 +45,16 @@ Usage
     python manage.py drop_db
 ```
 
+3) One way to use roadbuster with a package you're currently working on is:
+   ```
+       pip uninstall <package_name>
+       python path/to/package/setup.py develop
+   ```
+   And then when you're done:
+   ```
+      python path/to/package/setup.py develop --uninstall
+      pip install -r dev_requirements.txt
+   ```
 
 Contribution
 =============
