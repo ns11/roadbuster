@@ -1,13 +1,14 @@
 Django==1.11.15
--e git+git@github.com:divio/django-cms.git@release/4.0.x#egg=django_cms
--e git+git@github.com:FidelityInternational/djangocms-fil-admin-style.git@master#egg=djangocms_fil_admin_style
--e git+git@github.com:FidelityInternational/djangocms-fil-bootstrap.git@master#egg=djangocms_fil_bootstrap
--e git+git@github.com:FidelityInternational/djangocms-internalsearch.git@master#egg=djangocms_internalsearch
--e git+git@github.com:FidelityInternational/djangocms-versioning.git@master#egg=djangocms_versioning
--e git+git@github.com:FidelityInternational/djangocms-contentexpiry.git@master#egg=djangocms_contentexpiry
--e git+git@github.com:FidelityInternational/djangocms-version-locking.git@master#egg=djangocms_version_locking
--e git+git@github.com:divio/djangocms-moderation.git@release/1.0.x#egg=djangocms_moderation
--e git+git@github.com:divio/djangocms-text-ckeditor.git@support/4.0.x#egg=djangocms_text_ckeditor
--e git+git@github.com:aldryn/aldryn-forms.git@2932c85ffc87717ed1b9a3cdf1ada0e3ea2cdbb0#egg=aldryn_forms
--e git+git@github.com:divio/djangocms-versioning-filer.git@master#egg=djangocms_versioning_filer
+django-admin-rangefilter
+-e addons-dev/django-cms
+-e git+https://github.com:FidelityInternational/djangocms-fil-admin-style.git@master#egg=djangocms_fil_admin_style
+-e git+https://github.com/FidelityInternational/djangocms-fil-admin-style.git@master#egg=djangocms_fil_admin_style
+-e git+https://github.com/FidelityInternational/djangocms-fil-bootstrap.git@master#egg=djangocms_fil_bootstrap
+-e git+https://github.com/FidelityInternational/djangocms-internalsearch.git@master#egg=djangocms_internalsearch
+-e git+https://github.com/FidelityInternational/djangocms-versioning.git@master#egg=djangocms_versioning
+-e git+https://github.com/FidelityInternational/djangocms-contentexpiry.git@master#egg=djangocms_contentexpiry
+-e git+https://github.com/divio/djangocms-moderation.git@release/1.0.x#egg=djangocms_moderation
+-e git+https://github.com/divio/djangocms-text-ckeditor.git@support/4.0.x#egg=djangocms_text_ckeditor
+-e git+https://github.com/aldryn/aldryn-forms.git@2932c85ffc87717ed1b9a3cdf1ada0e3ea2cdbb0#egg=aldryn_forms
+-e git+https://github.com/divio/djangocms-versioning-filer.git@master#egg=djangocms_versioning_filer
 -r ./requirements.txt

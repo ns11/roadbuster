@@ -4,3 +4,7 @@
 media/*
 project.db
 env/*
+Dockerfile
+addons-dev/djangocms-version-locking
+.history
+src
