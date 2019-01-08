@@ -15,6 +15,11 @@ Extras
 
 Prerequisites
 ============
+1) Elastic Search: https://www.elastic.co/downloads/past-releases/elasticsearch-2-0-0
+
+2) Java 8 for MacOS: `brew cask install homebrew/cask-versions/java8`
+
+
 Elastic search needs to be installed. Visit http://127.0.0.1:9200/ to confirm it is installed and configured correctly.
 
 
