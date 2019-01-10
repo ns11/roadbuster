@@ -1,0 +1,24 @@
+#nox
+#future nox-repo (fil-test-suite)
+
+pytest
+pytest-django
+pytest-cov
+
+flake8
+#import sort
+isort
+
+#formatter
+black
+
+##xitures
+factory-boy
+
+##debuggers
+ipdb
+
+#docs
+sphinx
+Pallets-Sphinx-Themes
+recommonmark

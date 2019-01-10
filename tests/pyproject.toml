@@ -1,0 +1,31 @@
+[tool.black]
+line-length = 88
+py36 = true
+include = '\.py$'
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.cache*
+  | \.fox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | addons-dev
+  | node_modules
+  | scripts
+  | src 
+  | tmp 
+  | .history  
+
+  # The following are specific to Black, you probably don't want those.
+  | blib2to3
+  | tests/data
+)/
+'''
+
+[build-system]
+requires = ["setuptools", "wheel>=0.27"]
