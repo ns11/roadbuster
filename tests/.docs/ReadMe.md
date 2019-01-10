@@ -3,6 +3,8 @@ Introduction
 
 # Docs
 
+Cd into the parent dir of ``Readme``.
+
 The doc gneration build is served by ``pip install test_requirements.txt``
 
 cd int ``docs/`` where the conf.py is situated
