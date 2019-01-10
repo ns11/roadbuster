@@ -3,7 +3,7 @@ FIL THIS Reference
 
 .. toctree:: 
 
-    ReadMe
+    ../ReadMe
   
 
 Indices and tables
